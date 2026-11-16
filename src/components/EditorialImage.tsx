@@ -1,0 +1,50 @@
+import { useState } from 'react';
+
+interface EditorialImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  containerClassName?: string;
+  priority?: boolean;
+}
+
+export function EditorialImage({
+  src,
+  alt,
+  className = 'w-full h-full object-cover',
+  containerClassName = 'relative overflow-hidden bg-[#EAE5DC]',
+  priority = false,
+}: EditorialImageProps) {
+  const [hasError, setHasError] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className={containerClassName}>
+      {!hasError ? (
+        <img
+          src={src}
+          alt={alt}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding={priority ? 'sync' : 'async'}
+          referrerPolicy="no-referrer"
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setHasError(true)}
+          className={`${className} transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-100'
+          }`}
+        />
+      ) : (
+        <div
+          role="img"
+          aria-label={alt}
+          className="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#EAE5DC] to-[#DED7CA] text-[#77736B]"
+        >
+          <span className="font-serif text-lg tracking-wide text-[#24231F] mb-1">
+            Atelier Veyra
+          </span>
+          <span className="text-xs max-w-xs leading-relaxed">{alt}</span>
+        </div>
+      )}
+    </div>
+  );
+}

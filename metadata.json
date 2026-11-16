@@ -1,0 +1,6 @@
+{
+  "name": "Atelier Veyra — Interior Architecture & Design Studio",
+  "description": "An editorial interior design studio crafting timeless residential and commercial spaces with bespoke architecture, natural materials, and quiet luxury.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
