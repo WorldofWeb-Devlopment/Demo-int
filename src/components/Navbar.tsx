@@ -44,8 +44,8 @@ export function Navbar({
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-colors duration-300 ${
         useSolidSurface
-          ? 'bg-[#F5F2EC]/95 backdrop-blur-md border-b border-[#24231F]/10 text-[#24231F]'
-          : 'bg-gradient-to-b from-[#24231F]/55 to-transparent text-[#F5F2EC]'
+          ? 'bg-[#e9d9ca]/95 backdrop-blur-md border-b border-[#4d6080]/15 text-[#4d6080]'
+          : 'bg-gradient-to-b from-[#4d6080]/70 to-transparent text-[#e9d9ca]'
       }`}
     >
       <div className="max-w-[1360px] mx-auto px-6 md:px-10 h-20 flex items-center justify-between gap-8">
@@ -57,7 +57,7 @@ export function Navbar({
             setMobileOpen(false);
             onNavigateHome();
           }}
-          className="font-serif text-2xl tracking-[0.04em] font-medium whitespace-nowrap shrink-0 transition-opacity hover:opacity-80"
+          className="font-serif text-2xl tracking-[0.04em] font-normal whitespace-nowrap shrink-0 transition-opacity hover:opacity-80"
         >
           {STUDIO_CONTACT.brandName}
         </a>
@@ -65,7 +65,7 @@ export function Navbar({
         {/* Zone 2: Primary Navigation Links */}
         <nav
           aria-label="Primary navigation"
-          className="hidden md:flex items-center gap-8 text-[13px] tracking-[0.06em] font-medium"
+          className="hidden md:flex items-center gap-8 text-[13px] tracking-[0.06em] font-semibold"
         >
           {NAV_LINKS.map((link) => (
             <a
@@ -75,7 +75,7 @@ export function Navbar({
                 e.preventDefault();
                 handleNavClick(link.id);
               }}
-              className="relative py-1 whitespace-nowrap shrink-0 transition-opacity hover:opacity-75 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-[#A68A64] hover:after:w-full after:transition-all after:duration-200"
+              className="relative py-1 whitespace-nowrap shrink-0 transition-opacity hover:opacity-75 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#f4721e] hover:after:w-full after:transition-all after:duration-200"
             >
               {link.label}
             </a>
@@ -87,10 +87,10 @@ export function Navbar({
           <button
             type="button"
             onClick={() => handleNavClick('contact')}
-            className={`hidden md:inline-flex items-center justify-center px-5 py-2.5 text-xs tracking-[0.08em] font-medium transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer ${
+            className={`hidden md:inline-flex items-center justify-center px-5 py-2.5 text-xs tracking-[0.08em] font-semibold transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer ${
               useSolidSurface
-                ? 'bg-[#24231F] text-[#F5F2EC] hover:bg-[#A68A64]'
-                : 'bg-[#F5F2EC] text-[#24231F] hover:bg-[#EAE5DC]'
+                ? 'bg-[#4d6080] text-[#e9d9ca] hover:bg-[#f4721e]'
+                : 'bg-[#f4721e] text-[#e9d9ca] hover:bg-[#e9d9ca] hover:text-[#4d6080]'
             }`}
           >
             Book Consultation
@@ -110,7 +110,7 @@ export function Navbar({
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#F5F2EC] text-[#24231F] border-t border-[#24231F]/10 px-6 py-8 space-y-6">
+        <div className="md:hidden bg-[#e9d9ca] text-[#4d6080] border-t border-[#4d6080]/15 px-6 py-8 space-y-6">
           <nav aria-label="Mobile navigation" className="flex flex-col space-y-4">
             {NAV_LINKS.map((link) => (
               <a
@@ -120,7 +120,7 @@ export function Navbar({
                   e.preventDefault();
                   handleNavClick(link.id);
                 }}
-                className="font-serif text-2xl py-1 border-b border-[#24231F]/10 text-[#24231F] hover:text-[#A68A64] transition-colors"
+                className="font-serif text-2xl py-1 border-b border-[#4d6080]/15 text-[#4d6080] hover:text-[#f4721e] transition-colors"
               >
                 {link.label}
               </a>
@@ -129,7 +129,7 @@ export function Navbar({
           <button
             type="button"
             onClick={() => handleNavClick('contact')}
-            className="w-full py-3.5 px-6 bg-[#24231F] text-[#F5F2EC] text-xs tracking-[0.1em] font-medium hover:bg-[#A68A64] transition-colors cursor-pointer"
+            className="w-full py-3.5 px-6 bg-[#4d6080] text-[#e9d9ca] text-xs tracking-[0.1em] font-semibold hover:bg-[#f4721e] transition-colors cursor-pointer"
           >
             Book Consultation
           </button>

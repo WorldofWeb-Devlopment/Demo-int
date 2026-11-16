@@ -58,15 +58,15 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[#F5F2EC] text-[#24231F]">
+    <section id="contact" className="py-24 md:py-32 bg-[#e9d9ca] text-[#4d6080]">
       <div className="max-w-[1360px] mx-auto px-6 md:px-10">
         {/* Section Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 pb-10 border-b border-[#24231F]/12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 pb-10 border-b border-[#4d6080]/20">
           <div className="lg:col-span-7">
-            <p className="text-xs tracking-[0.14em] text-[#A68A64] font-medium mb-4">
+            <p className="text-xs tracking-[0.14em] uppercase text-[#f4721e] font-semibold mb-4">
               Begin A Conversation
             </p>
-            <h2 className="font-serif text-[clamp(2.5rem,4vw,3.9rem)] leading-[1.06] font-normal text-[#24231F]">
+            <h2 className="font-serif text-[clamp(2.5rem,4vw,3.9rem)] leading-[1.06] font-normal text-[#4d6080]">
               Let&apos;s Create Something Beautiful.
             </h2>
           </div>
@@ -76,9 +76,9 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#24231F] text-[#F5F2EC] text-xs tracking-[0.08em] font-medium hover:bg-[#A68A64] transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#4d6080] text-[#e9d9ca] text-xs tracking-[0.08em] font-semibold hover:bg-[#f4721e] transition-colors whitespace-nowrap"
             >
-              <MessageCircle className="w-4 h-4 text-[#A68A64]" />
+              <MessageCircle className="w-4 h-4 text-[#f4721e]" />
               <span>WhatsApp Enquiry</span>
             </a>
           </div>
@@ -98,28 +98,28 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
               <div
                 role="status"
                 aria-live="polite"
-                className="p-8 md:p-10 bg-[#EAE5DC]/65 border border-[#24231F]/12 space-y-5"
+                className="p-8 md:p-10 bg-[#4d6080] text-[#e9d9ca] border border-[#4d6080] space-y-5"
               >
-                <div className="w-10 h-10 rounded-full bg-[#24231F] text-[#F5F2EC] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#f4721e] text-[#e9d9ca] flex items-center justify-center">
                   <Check className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif text-3xl text-[#24231F]">
+                <h3 className="font-serif text-3xl text-[#e9d9ca]">
                   Thank You, {submittedRecord.name}.
                 </h3>
-                <p className="text-[15px] leading-[1.7] text-[#77736B] max-w-lg">
+                <p className="text-[15px] leading-[1.7] text-[#e9d9ca]/90 max-w-lg">
                   Your consultation request for{' '}
-                  <span className="text-[#24231F] font-medium">
+                  <span className="text-[#f4721e] font-semibold">
                     {submittedRecord.projectType}
                   </span>{' '}
                   has been recorded. A principal designer will respond to{' '}
-                  <span className="text-[#24231F]">{submittedRecord.email}</span> within one
+                  <span className="text-[#e9d9ca] font-semibold">{submittedRecord.email}</span> within one
                   business day.
                 </p>
                 <div className="pt-2 flex flex-wrap gap-4">
                   <button
                     type="button"
                     onClick={() => setSubmittedRecord(null)}
-                    className="px-6 py-3 border border-[#24231F]/25 text-xs tracking-[0.08em] font-medium text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors cursor-pointer"
+                    className="px-6 py-3 border border-[#e9d9ca]/35 text-xs tracking-[0.08em] font-semibold text-[#e9d9ca] hover:bg-[#e9d9ca] hover:text-[#4d6080] transition-colors cursor-pointer"
                   >
                     Send Another Enquiry
                   </button>
@@ -127,7 +127,7 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#A68A64] text-[#F5F2EC] text-xs tracking-[0.08em] font-medium hover:bg-[#24231F] transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#f4721e] text-[#e9d9ca] text-xs tracking-[0.08em] font-semibold hover:bg-[#e9d9ca] hover:text-[#4d6080] transition-colors"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>Continue on WhatsApp</span>
@@ -140,7 +140,7 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                   <div>
                     <label
                       htmlFor="contact-name"
-                      className="block text-xs tracking-[0.08em] text-[#77736B] mb-2"
+                      className="block text-xs tracking-[0.08em] font-semibold text-[#4d6080] mb-2"
                     >
                       Full Name *
                     </label>
@@ -156,10 +156,10 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                       placeholder="Claire Lindqvist"
                       aria-invalid={Boolean(errors.name)}
                       aria-describedby={errors.name ? 'contact-name-error' : undefined}
-                      className="w-full px-0 py-3 bg-transparent border-b border-[#24231F]/25 text-[#24231F] placeholder:text-[#77736B]/55 text-sm focus:border-[#A68A64] focus:outline-none transition-colors"
+                      className="w-full px-0 py-3 bg-transparent border-b border-[#4d6080]/35 text-[#4d6080] placeholder:text-[#4d6080]/55 text-sm focus:border-[#f4721e] focus:outline-none transition-colors"
                     />
                     {errors.name && (
-                      <p id="contact-name-error" className="mt-1.5 text-xs text-[#9A3412]">
+                      <p id="contact-name-error" className="mt-1.5 text-xs text-[#f4721e] font-semibold">
                         {errors.name}
                       </p>
                     )}
@@ -168,7 +168,7 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                   <div>
                     <label
                       htmlFor="contact-email"
-                      className="block text-xs tracking-[0.08em] text-[#77736B] mb-2"
+                      className="block text-xs tracking-[0.08em] font-semibold text-[#4d6080] mb-2"
                     >
                       Email Address *
                     </label>
@@ -184,10 +184,10 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                       placeholder="claire@example.com"
                       aria-invalid={Boolean(errors.email)}
                       aria-describedby={errors.email ? 'contact-email-error' : undefined}
-                      className="w-full px-0 py-3 bg-transparent border-b border-[#24231F]/25 text-[#24231F] placeholder:text-[#77736B]/55 text-sm focus:border-[#A68A64] focus:outline-none transition-colors"
+                      className="w-full px-0 py-3 bg-transparent border-b border-[#4d6080]/35 text-[#4d6080] placeholder:text-[#4d6080]/55 text-sm focus:border-[#f4721e] focus:outline-none transition-colors"
                     />
                     {errors.email && (
-                      <p id="contact-email-error" className="mt-1.5 text-xs text-[#9A3412]">
+                      <p id="contact-email-error" className="mt-1.5 text-xs text-[#f4721e] font-semibold">
                         {errors.email}
                       </p>
                     )}
@@ -198,7 +198,7 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                   <div>
                     <label
                       htmlFor="contact-phone"
-                      className="block text-xs tracking-[0.08em] text-[#77736B] mb-2"
+                      className="block text-xs tracking-[0.08em] font-semibold text-[#4d6080] mb-2"
                     >
                       Phone Number
                     </label>
@@ -214,10 +214,10 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                       placeholder="+1 (000) 000-0000"
                       aria-invalid={Boolean(errors.phone)}
                       aria-describedby={errors.phone ? 'contact-phone-error' : undefined}
-                      className="w-full px-0 py-3 bg-transparent border-b border-[#24231F]/25 text-[#24231F] placeholder:text-[#77736B]/55 text-sm focus:border-[#A68A64] focus:outline-none transition-colors"
+                      className="w-full px-0 py-3 bg-transparent border-b border-[#4d6080]/35 text-[#4d6080] placeholder:text-[#4d6080]/55 text-sm focus:border-[#f4721e] focus:outline-none transition-colors"
                     />
                     {errors.phone && (
-                      <p id="contact-phone-error" className="mt-1.5 text-xs text-[#9A3412]">
+                      <p id="contact-phone-error" className="mt-1.5 text-xs text-[#f4721e] font-semibold">
                         {errors.phone}
                       </p>
                     )}
@@ -226,7 +226,7 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                   <div>
                     <label
                       htmlFor="contact-service"
-                      className="block text-xs tracking-[0.08em] text-[#77736B] mb-2"
+                      className="block text-xs tracking-[0.08em] font-semibold text-[#4d6080] mb-2"
                     >
                       Project Discipline
                     </label>
@@ -237,7 +237,7 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                       onChange={(e) =>
                         setValues((prev) => ({ ...prev, projectType: e.target.value }))
                       }
-                      className="w-full px-0 py-3 bg-transparent border-b border-[#24231F]/25 text-[#24231F] text-sm focus:border-[#A68A64] focus:outline-none transition-colors cursor-pointer"
+                      className="w-full px-0 py-3 bg-transparent border-b border-[#4d6080]/35 text-[#4d6080] text-sm focus:border-[#f4721e] focus:outline-none transition-colors cursor-pointer"
                     >
                       {SERVICES.map((service) => (
                         <option key={service.id} value={service.title}>
@@ -251,7 +251,7 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                 <div>
                   <label
                     htmlFor="contact-message"
-                    className="block text-xs tracking-[0.08em] text-[#77736B] mb-2"
+                    className="block text-xs tracking-[0.08em] font-semibold text-[#4d6080] mb-2"
                   >
                     Tell Us About Your Space *
                   </label>
@@ -268,10 +268,10 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                     placeholder="Share your property location, approximate square footage, desired timeline, or architectural inspiration..."
                     aria-invalid={Boolean(errors.message)}
                     aria-describedby={errors.message ? 'contact-message-error' : undefined}
-                    className="w-full px-0 py-3 bg-transparent border-b border-[#24231F]/25 text-[#24231F] placeholder:text-[#77736B]/55 text-sm focus:border-[#A68A64] focus:outline-none transition-colors resize-none"
+                    className="w-full px-0 py-3 bg-transparent border-b border-[#4d6080]/35 text-[#4d6080] placeholder:text-[#4d6080]/55 text-sm focus:border-[#f4721e] focus:outline-none transition-colors resize-none"
                   />
                   {errors.message && (
-                    <p id="contact-message-error" className="mt-1.5 text-xs text-[#9A3412]">
+                    <p id="contact-message-error" className="mt-1.5 text-xs text-[#f4721e] font-semibold">
                       {errors.message}
                     </p>
                   )}
@@ -280,11 +280,11 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                 <div className="pt-4 flex flex-wrap items-center gap-6">
                   <button
                     type="submit"
-                    className="px-8 py-3.5 bg-[#24231F] text-[#F5F2EC] text-xs tracking-[0.1em] font-medium hover:bg-[#A68A64] transition-colors cursor-pointer"
+                    className="px-8 py-3.5 bg-[#4d6080] text-[#e9d9ca] text-xs tracking-[0.1em] font-semibold hover:bg-[#f4721e] transition-colors cursor-pointer"
                   >
                     Request Private Consultation
                   </button>
-                  <span className="text-xs text-[#77736B]">
+                  <span className="text-xs text-[#4d6080]">
                     Response within one business day.
                   </span>
                 </div>
@@ -293,22 +293,22 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
           </motion.div>
 
           {/* Right: Studio Contact Information */}
-          <div className="lg:col-span-5 bg-[#EAE5DC]/55 border border-[#24231F]/10 p-8 md:p-10 space-y-7">
+          <div className="lg:col-span-5 bg-[#4d6080] text-[#e9d9ca] border border-[#4d6080] p-8 md:p-10 space-y-7">
             <div>
-              <p className="text-xs tracking-[0.12em] text-[#A68A64] font-medium mb-2">
+              <p className="text-xs tracking-[0.12em] uppercase text-[#f4721e] font-semibold mb-2">
                 Studio Atelier
               </p>
-              <h3 className="font-serif text-2xl text-[#24231F] font-normal">
+              <h3 className="font-serif text-2xl text-[#e9d9ca] font-normal">
                 Visit or Reach Our Principals
               </h3>
             </div>
 
-            <div className="space-y-5 text-sm border-t border-[#24231F]/12 pt-6">
+            <div className="space-y-5 text-sm border-t border-[#e9d9ca]/20 pt-6">
               <div className="flex items-start gap-3.5">
-                <MapPin className="w-4 h-4 text-[#A68A64] mt-1 shrink-0" />
+                <MapPin className="w-4 h-4 text-[#f4721e] mt-1 shrink-0" />
                 <div>
-                  <p className="text-xs text-[#77736B] mb-1">Studio Location</p>
-                  <p className="text-[#24231F] leading-relaxed">
+                  <p className="text-xs text-[#e9d9ca]/75 mb-1">Studio Location</p>
+                  <p className="text-[#e9d9ca] leading-relaxed">
                     {STUDIO_CONTACT.addressLine1}
                     <br />
                     {STUDIO_CONTACT.addressLine2}
@@ -317,12 +317,12 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <Phone className="w-4 h-4 text-[#A68A64] mt-1 shrink-0" />
+                <Phone className="w-4 h-4 text-[#f4721e] mt-1 shrink-0" />
                 <div>
-                  <p className="text-xs text-[#77736B] mb-1">Telephone</p>
+                  <p className="text-xs text-[#e9d9ca]/75 mb-1">Telephone</p>
                   <a
                     href={`tel:${STUDIO_CONTACT.phoneDisplay.replace(/[^+\d]/g, '')}`}
-                    className="text-[#24231F] hover:text-[#A68A64] transition-colors tabular-nums"
+                    className="text-[#e9d9ca] hover:text-[#f4721e] transition-colors tabular-nums"
                   >
                     {STUDIO_CONTACT.phoneDisplay}
                   </a>
@@ -330,12 +330,12 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <Mail className="w-4 h-4 text-[#A68A64] mt-1 shrink-0" />
+                <Mail className="w-4 h-4 text-[#f4721e] mt-1 shrink-0" />
                 <div>
-                  <p className="text-xs text-[#77736B] mb-1">Email</p>
+                  <p className="text-xs text-[#e9d9ca]/75 mb-1">Email</p>
                   <a
                     href={`mailto:${STUDIO_CONTACT.email}`}
-                    className="text-[#24231F] hover:text-[#A68A64] transition-colors"
+                    className="text-[#e9d9ca] hover:text-[#f4721e] transition-colors"
                   >
                     {STUDIO_CONTACT.email}
                   </a>
@@ -343,10 +343,10 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <Clock className="w-4 h-4 text-[#A68A64] mt-1 shrink-0" />
+                <Clock className="w-4 h-4 text-[#f4721e] mt-1 shrink-0" />
                 <div>
-                  <p className="text-xs text-[#77736B] mb-1">Consultation Hours</p>
-                  <p className="text-[#24231F]">{STUDIO_CONTACT.hours}</p>
+                  <p className="text-xs text-[#e9d9ca]/75 mb-1">Consultation Hours</p>
+                  <p className="text-[#e9d9ca]">{STUDIO_CONTACT.hours}</p>
                 </div>
               </div>
             </div>
@@ -354,34 +354,34 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
         </div>
 
         {/* Tier 2: Interactive Google Maps Section + Studio Address Details Beside Map */}
-        <div className="pt-14 border-t border-[#24231F]/12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="pt-14 border-t border-[#4d6080]/20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="lg:col-span-4 space-y-5">
-            <p className="text-xs tracking-[0.14em] text-[#A68A64] font-medium">
+            <p className="text-xs tracking-[0.14em] uppercase text-[#f4721e] font-semibold">
               Atelier Location
             </p>
-            <h3 className="font-serif text-3xl text-[#24231F] font-normal">
+            <h3 className="font-serif text-3xl text-[#4d6080] font-normal">
               Material Library &amp; Design Studio
             </h3>
-            <p className="text-sm leading-[1.75] text-[#77736B]">
+            <p className="text-sm leading-[1.75] text-[#4d6080]">
               Private studio appointments include curated stone, timber, linen, and bronze
               material reviews alongside full-scale architectural drawings.
             </p>
 
-            <div className="pt-4 border-t border-[#24231F]/12 space-y-3 text-sm">
+            <div className="pt-4 border-t border-[#4d6080]/20 space-y-3 text-sm">
               <div>
-                <p className="text-xs text-[#77736B] mb-0.5">Studio Address</p>
-                <p className="font-medium text-[#24231F]">{STUDIO_CONTACT.brandName}</p>
-                <p className="text-[#77736B] leading-relaxed">
+                <p className="text-xs text-[#4d6080]/80 mb-0.5">Studio Address</p>
+                <p className="font-semibold text-[#4d6080]">{STUDIO_CONTACT.brandName}</p>
+                <p className="text-[#4d6080] leading-relaxed">
                   {STUDIO_CONTACT.addressLine1}
                   <br />
                   {STUDIO_CONTACT.addressLine2}
                 </p>
               </div>
-              <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-xs text-[#77736B]">
+              <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-xs text-[#4d6080]">
                 <span className="tabular-nums">{STUDIO_CONTACT.phoneDisplay}</span>
                 <span>{STUDIO_CONTACT.email}</span>
               </div>
-              <p className="text-xs text-[#77736B] pt-1">
+              <p className="text-xs text-[#4d6080]/85 pt-1">
                 Private parking &amp; material sample consultations available by prior appointment.
               </p>
             </div>

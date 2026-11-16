@@ -45,23 +45,23 @@ function InteractiveMapContent({
         onClick={() => setInfoOpen((prev) => !prev)}
       >
         <div className="flex flex-col items-center cursor-pointer select-none">
-          <div className="px-3 py-1.5 rounded-sm bg-[#24231F] text-[#F5F2EC] border border-[#A68A64] shadow-md flex items-center gap-2 mb-1.5">
-            <span className="w-2 h-2 rounded-full bg-[#A68A64]" aria-hidden="true" />
+          <div className="px-3 py-1.5 rounded-sm bg-[#4d6080] text-[#e9d9ca] border border-[#f4721e] shadow-md flex items-center gap-2 mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#f4721e]" aria-hidden="true" />
             <span className="font-serif text-xs tracking-[0.06em] whitespace-nowrap">
               {STUDIO_CONTACT.brandName}
             </span>
           </div>
-          <div className="w-4 h-4 rotate-45 bg-[#A68A64] border-2 border-[#F5F2EC] shadow-sm" />
+          <div className="w-4 h-4 rotate-45 bg-[#f4721e] border-2 border-[#e9d9ca] shadow-sm" />
         </div>
       </AdvancedMarker>
 
       {infoOpen && marker && (
         <InfoWindow anchor={marker} onCloseClick={() => setInfoOpen(false)} maxWidth={260}>
-          <div className="p-1 text-[#24231F] font-sans">
-            <p className="font-serif text-base font-medium mb-1">
+          <div className="p-1 text-[#4d6080] font-sans">
+            <p className="font-serif text-base font-normal mb-1">
               {STUDIO_CONTACT.brandName}
             </p>
-            <p className="text-xs text-[#77736B] leading-relaxed">
+            <p className="text-xs text-[#4d6080] leading-relaxed">
               {STUDIO_CONTACT.addressLine1}
               <br />
               {STUDIO_CONTACT.addressLine2}
@@ -80,7 +80,7 @@ function InteractiveMapContent({
             onZoomChange(next);
           }}
           aria-label="Zoom in map"
-          className="w-10 h-10 rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/15 text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
+          className="w-10 h-10 rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
         >
           <Plus className="w-4 h-4" />
         </button>
@@ -92,7 +92,7 @@ function InteractiveMapContent({
             onZoomChange(next);
           }}
           aria-label="Zoom out map"
-          className="w-10 h-10 rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/15 text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
+          className="w-10 h-10 rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
         >
           <Minus className="w-4 h-4" />
         </button>
@@ -100,7 +100,7 @@ function InteractiveMapContent({
           type="button"
           onClick={handleRecenter}
           aria-label="Center map on studio location"
-          className="w-10 h-10 rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/15 text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
+          className="w-10 h-10 rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
         >
           <LocateFixed className="w-4 h-4" />
         </button>
@@ -148,7 +148,7 @@ export function StudioMap() {
 
   return (
     <div className="space-y-4">
-      <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[460px] rounded-lg overflow-hidden border border-[#24231F]/12 bg-[#EAE5DC]">
+      <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[460px] rounded-lg overflow-hidden border border-[#4d6080]/20 bg-[#4d6080]/10">
         {hasApiKey ? (
           <APIProvider apiKey={apiKey} language="en" region="US">
             <GoogleMap
@@ -166,7 +166,7 @@ export function StudioMap() {
                 }
               }}
               internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
-              style={{ width: '100%', height: '100%' }}
+              className="w-full h-full"
             >
               <InteractiveMapContent
                 zoom={zoom}
@@ -189,15 +189,15 @@ export function StudioMap() {
 
             {/* Custom Luxury Studio Pin Overlay Badge */}
             <div className="pointer-events-none absolute top-4 left-4 z-10 max-w-[280px]">
-              <div className="pointer-events-auto rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/12 px-3.5 py-2.5 shadow-sm flex items-start gap-2.5">
-                <span className="mt-0.5 w-6 h-6 rounded-full bg-[#24231F] text-[#A68A64] flex items-center justify-center shrink-0">
+              <div className="pointer-events-auto rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 px-3.5 py-2.5 shadow-sm flex items-start gap-2.5">
+                <span className="mt-0.5 w-6 h-6 rounded-full bg-[#4d6080] text-[#f4721e] flex items-center justify-center shrink-0">
                   <MapPin className="w-3.5 h-3.5" />
                 </span>
                 <div className="min-w-0">
-                  <p className="font-serif text-sm font-medium text-[#24231F] leading-tight">
+                  <p className="font-serif text-sm font-normal text-[#4d6080] leading-tight">
                     {STUDIO_CONTACT.brandName}
                   </p>
-                  <p className="text-[11px] text-[#77736B] leading-snug mt-0.5">
+                  <p className="text-[11px] text-[#4d6080] leading-snug mt-0.5">
                     {STUDIO_CONTACT.isPlaceholderAddress
                       ? 'Studio Address Placeholder'
                       : STUDIO_CONTACT.addressLine1}
@@ -212,7 +212,7 @@ export function StudioMap() {
                 type="button"
                 onClick={handleZoomIn}
                 aria-label="Zoom in map"
-                className="w-10 h-10 rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/15 text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
+                className="w-10 h-10 rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
               </button>
@@ -220,7 +220,7 @@ export function StudioMap() {
                 type="button"
                 onClick={handleZoomOut}
                 aria-label="Zoom out map"
-                className="w-10 h-10 rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/15 text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
+                className="w-10 h-10 rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
               >
                 <Minus className="w-4 h-4" />
               </button>
@@ -228,7 +228,7 @@ export function StudioMap() {
                 type="button"
                 onClick={handleReset}
                 aria-label="Center map on studio location"
-                className="w-10 h-10 rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/15 text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
+                className="w-10 h-10 rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors flex items-center justify-center shadow-sm cursor-pointer"
               >
                 <LocateFixed className="w-4 h-4" />
               </button>
@@ -244,9 +244,9 @@ export function StudioMap() {
               setMapType((prev) => (prev === 'roadmap' ? 'satellite' : 'roadmap'))
             }
             aria-label={`Switch map view to ${mapType === 'roadmap' ? 'satellite' : 'roadmap'}`}
-            className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-[#F5F2EC]/95 backdrop-blur-sm border border-[#24231F]/15 text-xs font-medium text-[#24231F] hover:bg-[#24231F] hover:text-[#F5F2EC] transition-colors shadow-sm cursor-pointer whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-[#e9d9ca]/95 backdrop-blur-sm border border-[#4d6080]/20 text-xs font-semibold text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors shadow-sm cursor-pointer whitespace-nowrap"
           >
-            <Layers className="w-3.5 h-3.5 text-[#A68A64]" />
+            <Layers className="w-3.5 h-3.5 text-[#f4721e]" />
             <span>{mapType === 'roadmap' ? 'Satellite' : 'Map View'}</span>
           </button>
         </div>
@@ -254,7 +254,7 @@ export function StudioMap() {
 
       {/* Bottom Map Action Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
-        <p className="text-xs text-[#77736B] leading-relaxed">
+        <p className="text-xs text-[#4d6080] leading-relaxed">
           {STUDIO_CONTACT.isPlaceholderAddress
             ? 'Placeholder studio coordinates shown. Configure VITE_STUDIO_ADDRESS_LINE1 and VITE_GOOGLE_MAPS_API_KEY to lock your exact studio pin.'
             : `${STUDIO_CONTACT.addressLine1} · ${STUDIO_CONTACT.addressLine2}`}
@@ -264,7 +264,7 @@ export function StudioMap() {
           href={directionsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-md bg-[#24231F] text-[#F5F2EC] text-xs tracking-[0.08em] font-medium hover:bg-[#A68A64] transition-colors whitespace-nowrap shrink-0 self-start sm:self-auto"
+          className="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-md bg-[#4d6080] text-[#e9d9ca] text-xs tracking-[0.08em] font-semibold hover:bg-[#f4721e] transition-colors whitespace-nowrap shrink-0 self-start sm:self-auto"
         >
           <Compass className="w-4 h-4" />
           <span>Get Directions</span>

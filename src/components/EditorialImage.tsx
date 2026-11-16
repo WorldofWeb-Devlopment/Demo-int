@@ -12,7 +12,7 @@ export function EditorialImage({
   src,
   alt,
   className = 'w-full h-full object-cover',
-  containerClassName = 'relative overflow-hidden bg-[#EAE5DC]',
+  containerClassName = 'relative overflow-hidden bg-[#4d6080]/10',
   priority = false,
 }: EditorialImageProps) {
   const [hasError, setHasError] = useState(false);
@@ -37,9 +37,9 @@ export function EditorialImage({
         <div
           role="img"
           aria-label={alt}
-          className="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#EAE5DC] to-[#DED7CA] text-[#77736B]"
+          className="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#e9d9ca] to-[#dfd0c0] text-[#4d6080]"
         >
-          <span className="font-serif text-lg tracking-wide text-[#24231F] mb-1">
+          <span className="font-serif text-lg tracking-wide text-[#4d6080] mb-1">
             Atelier Veyra
           </span>
           <span className="text-xs max-w-xs leading-relaxed">{alt}</span>

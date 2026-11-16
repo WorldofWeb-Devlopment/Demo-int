@@ -37,9 +37,9 @@ export interface CircularGalleryProps extends Omit<HTMLAttributes<HTMLDivElement
   style?: CSSProperties;
 }
 
-const DEFAULT_FONT = '400 28px "DM Serif Display"';
+const DEFAULT_FONT = '400 28px "BBH Bogle", "BBH Sans Bogle", "Josefin Sans", sans-serif';
 const DEFAULT_FONT_URL =
-  'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap';
+  'https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Josefin+Sans:ital,wght@0,300..700;1,300..700&display=swap';
 const SEGMENTS_X = 32;
 const SEGMENTS_Y = 24;
 const INTRO_SECONDS = 1.4;

@@ -1,13 +1,20 @@
 import type { ProjectSummary } from '../utils/studioLogic';
+import heroLivingImg from '../assets/images/hero_living_sanctuary_1794671212329.jpg';
+import aboutCraftImg from '../assets/images/about_atelier_craft_1794671213546.jpg';
+import modularKitchenImg from '../assets/images/service_modular_kitchen_1794671213493.jpg';
+import bedroomSuiteImg from '../assets/images/service_bedroom_suite_1794671214595.jpg';
+import commercialLoungeImg from '../assets/images/service_commercial_lounge_1794671215022.jpg';
+import villaResidenceImg from '../assets/images/project_villa_residence_1794671215428.jpg';
+import penthouseAtelierImg from '../assets/images/project_penthouse_atelier_1794671215268.jpg';
 
 export const IMAGES = {
-  heroLiving: '/src/assets/images/hero_living_sanctuary_1794671212329.jpg',
-  aboutCraft: '/src/assets/images/about_atelier_craft_1794671213546.jpg',
-  modularKitchen: '/src/assets/images/service_modular_kitchen_1794671213493.jpg',
-  bedroomSuite: '/src/assets/images/service_bedroom_suite_1794671214595.jpg',
-  commercialLounge: '/src/assets/images/service_commercial_lounge_1794671215022.jpg',
-  villaResidence: '/src/assets/images/project_villa_residence_1794671215428.jpg',
-  penthouseAtelier: '/src/assets/images/project_penthouse_atelier_1794671215268.jpg',
+  heroLiving: heroLivingImg,
+  aboutCraft: aboutCraftImg,
+  modularKitchen: modularKitchenImg,
+  bedroomSuite: bedroomSuiteImg,
+  commercialLounge: commercialLoungeImg,
+  villaResidence: villaResidenceImg,
+  penthouseAtelier: penthouseAtelierImg,
 } as const;
 
 export const STUDIO_CONTACT = {
