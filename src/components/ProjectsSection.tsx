@@ -16,15 +16,18 @@ export function ProjectsSection({ onOpenProject }: ProjectsSectionProps) {
   const visibleProjects = filterProjectsByCategory(PROJECTS, activeCategory);
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-[#e9d9ca] text-[#4d6080]">
+    <section id="projects" className="py-24 md:py-32 bg-[#FFF8E6] text-[#1C1C1C]">
       <div className="max-w-[1360px] mx-auto px-6 md:px-10">
         {/* Header + Filter Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 pb-8 border-b border-[#4d6080]/20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 pb-8 border-b border-[#1C1C1C]/15">
           <div>
-            <p className="text-xs tracking-[0.14em] uppercase text-[#f4721e] font-semibold mb-4">
-              Selected Monograph
-            </p>
-            <h2 className="font-serif text-[clamp(2.25rem,3.6vw,3.5rem)] leading-[1.08] font-normal text-[#4d6080]">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-6 h-[1.5px] bg-[#F5B700]" aria-hidden="true" />
+              <p className="text-xs tracking-[0.14em] uppercase text-[#1C1C1C] font-semibold">
+                Selected Monograph
+              </p>
+            </div>
+            <h2 className="font-serif text-[clamp(2.35rem,3.8vw,3.6rem)] leading-[1.08] font-medium text-[#1C1C1C]">
               Featured Projects
             </h2>
           </div>
@@ -32,7 +35,7 @@ export function ProjectsSection({ onOpenProject }: ProjectsSectionProps) {
           <div
             role="tablist"
             aria-label="Filter projects by category"
-            className="inline-flex items-center gap-1 p-1 bg-[#4d6080]/10 self-start md:self-auto"
+            className="inline-flex items-center gap-1 p-1 bg-[#1C1C1C]/5 border border-[#1C1C1C]/10 self-start md:self-auto"
           >
             {CATEGORIES.map((category) => {
               const isSelected = activeCategory === category;
@@ -45,8 +48,8 @@ export function ProjectsSection({ onOpenProject }: ProjectsSectionProps) {
                   onClick={() => setActiveCategory(category)}
                   className={`px-4 py-2 text-xs tracking-[0.06em] font-semibold transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                     isSelected
-                      ? 'bg-[#4d6080] text-[#e9d9ca]'
-                      : 'text-[#4d6080] hover:text-[#f4721e]'
+                      ? 'bg-[#F5B700] text-[#1C1C1C]'
+                      : 'text-[#555555] hover:text-[#1C1C1C]'
                   }`}
                 >
                   {category}
@@ -95,7 +98,7 @@ export function ProjectsSection({ onOpenProject }: ProjectsSectionProps) {
                   aria-label={`View project details for ${project.title}`}
                   className="w-full text-left cursor-pointer focus-visible:outline-none"
                 >
-                  <div className={`relative overflow-hidden bg-[#4d6080]/10 mb-5 ${aspectClass}`}>
+                  <div className={`relative overflow-hidden bg-[#1C1C1C]/5 mb-5 ${aspectClass}`}>
                     <EditorialImage
                       src={project.heroImage}
                       alt={`${project.title} — ${project.style}`}
@@ -106,24 +109,24 @@ export function ProjectsSection({ onOpenProject }: ProjectsSectionProps) {
 
                   <div className="flex items-start justify-between gap-6">
                     <div>
-                      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#4d6080] mb-2">
-                        <span className="text-[#f4721e] font-semibold">{project.category}</span>
+                      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#555555] mb-2">
+                        <span className="text-[#1C1C1C] font-semibold">{project.category}</span>
                         <span aria-hidden="true">·</span>
                         <span>{project.location}</span>
                         <span aria-hidden="true">·</span>
                         <span>{project.style}</span>
                       </div>
 
-                      <h3 className="font-serif text-2xl md:text-3xl text-[#4d6080] font-normal group-hover:text-[#f4721e] transition-colors mb-2">
+                      <h3 className="font-serif text-2xl md:text-3xl text-[#1C1C1C] font-medium mb-2">
                         {project.title}
                       </h3>
 
-                      <p className="text-sm leading-[1.65] text-[#4d6080] max-w-xl">
+                      <p className="text-sm leading-[1.65] text-[#555555] max-w-xl">
                         {project.summary}
                       </p>
                     </div>
 
-                    <span className="inline-flex items-center gap-1.5 text-xs tracking-[0.08em] font-semibold text-[#4d6080] border-b border-[#4d6080]/40 pb-1 shrink-0 mt-1 group-hover:border-[#f4721e] group-hover:text-[#f4721e] transition-colors whitespace-nowrap">
+                    <span className="inline-flex items-center gap-1.5 text-xs tracking-[0.08em] font-semibold text-[#1C1C1C] border-b border-[#1C1C1C]/40 pb-1 shrink-0 mt-1 group-hover:border-[#F5B700] transition-colors whitespace-nowrap">
                       <span>View Project</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>

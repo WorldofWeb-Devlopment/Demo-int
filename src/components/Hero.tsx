@@ -11,7 +11,7 @@ export function Hero({ onExploreProjects }: HeroProps) {
   return (
     <section
       id="top"
-      className="relative min-h-[92vh] w-full flex items-end bg-[#4d6080] text-[#e9d9ca] overflow-hidden"
+      className="relative min-h-[92vh] w-full flex items-end bg-[#1C1C1C] text-[#FFF8E6] overflow-hidden"
     >
       {/* Full-bleed architectural interior photograph */}
       <div className="absolute inset-0">
@@ -25,7 +25,7 @@ export function Hero({ onExploreProjects }: HeroProps) {
         {/* Measured scrim ensuring crisp WCAG contrast across all image luminance areas */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-[#4d6080]/90 via-[#4d6080]/45 to-[#4d6080]/25"
+          className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C]/90 via-[#1C1C1C]/45 to-[#1C1C1C]/30"
         />
       </div>
 
@@ -37,10 +37,13 @@ export function Hero({ onExploreProjects }: HeroProps) {
             transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-8"
           >
-            <p className="text-xs tracking-[0.14em] uppercase text-[#e9d9ca] mb-5 font-semibold">
-              Interior Architecture &amp; Bespoke Living
-            </p>
-            <h1 className="font-serif text-[clamp(2.75rem,5.4vw,5.25rem)] leading-[1.04] tracking-[0.02em] font-normal text-[#e9d9ca] max-w-3xl">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="w-6 h-[1.5px] bg-[#F5B700]" aria-hidden="true" />
+              <p className="text-xs tracking-[0.16em] uppercase text-[#F5B700] font-semibold">
+                Interior Architecture &amp; Bespoke Living
+              </p>
+            </div>
+            <h1 className="font-serif text-[clamp(2.85rem,5.6vw,5.5rem)] leading-[1.04] tracking-[-0.01em] font-medium text-[#FFF8E6] max-w-3xl">
               Spaces That Tell Your Story.
             </h1>
           </motion.div>
@@ -51,7 +54,7 @@ export function Hero({ onExploreProjects }: HeroProps) {
             transition={{ duration: 0.75, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-4 lg:pb-2 space-y-7"
           >
-            <p className="text-[15px] md:text-base leading-[1.7] text-[#e9d9ca] max-w-md font-normal">
+            <p className="text-[15px] md:text-base leading-[1.7] text-[#FFF8E6]/90 max-w-md font-normal">
               Thoughtfully designed interiors that bring beauty, comfort and functionality
               into everyday living.
             </p>
@@ -60,7 +63,7 @@ export function Hero({ onExploreProjects }: HeroProps) {
               <button
                 type="button"
                 onClick={onExploreProjects}
-                className="group inline-flex items-center gap-3 px-7 py-3.5 bg-[#f4721e] text-[#e9d9ca] text-xs tracking-[0.1em] font-semibold hover:bg-[#e9d9ca] hover:text-[#4d6080] transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                className="group inline-flex items-center gap-3 px-7 py-3.5 bg-[#F5B700] text-[#1C1C1C] text-xs tracking-[0.1em] font-semibold hover:bg-[#FFF8E6] hover:text-[#1C1C1C] transition-colors duration-200 whitespace-nowrap cursor-pointer"
               >
                 <span>Explore Our Projects</span>
                 <ArrowDownRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />

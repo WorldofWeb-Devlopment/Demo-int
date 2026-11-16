@@ -44,8 +44,8 @@ export function Navbar({
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-colors duration-300 ${
         useSolidSurface
-          ? 'bg-[#e9d9ca]/95 backdrop-blur-md border-b border-[#4d6080]/15 text-[#4d6080]'
-          : 'bg-gradient-to-b from-[#4d6080]/70 to-transparent text-[#e9d9ca]'
+          ? 'bg-[#1C1C1C]/95 backdrop-blur-md border-b border-[#FFF8E6]/10 text-[#FFF8E6]'
+          : 'bg-gradient-to-b from-[#1C1C1C]/80 to-transparent text-[#FFF8E6]'
       }`}
     >
       <div className="max-w-[1360px] mx-auto px-6 md:px-10 h-20 flex items-center justify-between gap-8">
@@ -57,7 +57,7 @@ export function Navbar({
             setMobileOpen(false);
             onNavigateHome();
           }}
-          className="font-serif text-2xl tracking-[0.04em] font-normal whitespace-nowrap shrink-0 transition-opacity hover:opacity-80"
+          className="font-serif text-2xl md:text-[26px] tracking-[0.03em] font-medium text-[#FFF8E6] whitespace-nowrap shrink-0 transition-opacity hover:opacity-85"
         >
           {STUDIO_CONTACT.brandName}
         </a>
@@ -65,7 +65,7 @@ export function Navbar({
         {/* Zone 2: Primary Navigation Links */}
         <nav
           aria-label="Primary navigation"
-          className="hidden md:flex items-center gap-8 text-[13px] tracking-[0.06em] font-semibold"
+          className="hidden md:flex items-center gap-8 text-[13px] tracking-[0.06em] font-medium text-[#FFF8E6]/90"
         >
           {NAV_LINKS.map((link) => (
             <a
@@ -75,7 +75,7 @@ export function Navbar({
                 e.preventDefault();
                 handleNavClick(link.id);
               }}
-              className="relative py-1 whitespace-nowrap shrink-0 transition-opacity hover:opacity-75 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#f4721e] hover:after:w-full after:transition-all after:duration-200"
+              className="relative py-1 whitespace-nowrap shrink-0 transition-colors hover:text-[#F5B700] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1.5px] after:bg-[#F5B700] hover:after:w-full after:transition-all after:duration-200"
             >
               {link.label}
             </a>
@@ -87,11 +87,7 @@ export function Navbar({
           <button
             type="button"
             onClick={() => handleNavClick('contact')}
-            className={`hidden md:inline-flex items-center justify-center px-5 py-2.5 text-xs tracking-[0.08em] font-semibold transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer ${
-              useSolidSurface
-                ? 'bg-[#4d6080] text-[#e9d9ca] hover:bg-[#f4721e]'
-                : 'bg-[#f4721e] text-[#e9d9ca] hover:bg-[#e9d9ca] hover:text-[#4d6080]'
-            }`}
+            className="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-xs tracking-[0.08em] font-semibold bg-[#F5B700] text-[#1C1C1C] hover:bg-[#FFF8E6] hover:text-[#1C1C1C] transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer"
           >
             Book Consultation
           </button>
@@ -101,7 +97,7 @@ export function Navbar({
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="md:hidden inline-flex items-center justify-center w-11 h-11 cursor-pointer"
+            className="md:hidden inline-flex items-center justify-center w-11 h-11 text-[#FFF8E6] cursor-pointer"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -110,7 +106,7 @@ export function Navbar({
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#e9d9ca] text-[#4d6080] border-t border-[#4d6080]/15 px-6 py-8 space-y-6">
+        <div className="md:hidden bg-[#1C1C1C] text-[#FFF8E6] border-t border-[#FFF8E6]/15 px-6 py-8 space-y-6">
           <nav aria-label="Mobile navigation" className="flex flex-col space-y-4">
             {NAV_LINKS.map((link) => (
               <a
@@ -120,7 +116,7 @@ export function Navbar({
                   e.preventDefault();
                   handleNavClick(link.id);
                 }}
-                className="font-serif text-2xl py-1 border-b border-[#4d6080]/15 text-[#4d6080] hover:text-[#f4721e] transition-colors"
+                className="font-serif text-2xl py-1 border-b border-[#FFF8E6]/10 text-[#FFF8E6] hover:text-[#F5B700] transition-colors"
               >
                 {link.label}
               </a>
@@ -129,7 +125,7 @@ export function Navbar({
           <button
             type="button"
             onClick={() => handleNavClick('contact')}
-            className="w-full py-3.5 px-6 bg-[#4d6080] text-[#e9d9ca] text-xs tracking-[0.1em] font-semibold hover:bg-[#f4721e] transition-colors cursor-pointer"
+            className="w-full py-3.5 px-6 bg-[#F5B700] text-[#1C1C1C] text-xs tracking-[0.1em] font-semibold hover:bg-[#FFF8E6] hover:text-[#1C1C1C] transition-colors cursor-pointer"
           >
             Book Consultation
           </button>

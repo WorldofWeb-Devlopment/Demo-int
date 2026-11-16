@@ -37,9 +37,9 @@ export interface CircularGalleryProps extends Omit<HTMLAttributes<HTMLDivElement
   style?: CSSProperties;
 }
 
-const DEFAULT_FONT = '400 28px "BBH Bogle", "BBH Sans Bogle", "Josefin Sans", sans-serif';
+const DEFAULT_FONT = '500 28px "Cormorant Garamond", Georgia, serif';
 const DEFAULT_FONT_URL =
-  'https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Josefin+Sans:ital,wght@0,300..700;1,300..700&display=swap';
+  'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap';
 const SEGMENTS_X = 32;
 const SEGMENTS_Y = 24;
 const INTRO_SECONDS = 1.4;

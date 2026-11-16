@@ -25,7 +25,7 @@ export function ProjectDetailView({
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="pt-28 pb-24 bg-[#e9d9ca] text-[#4d6080] min-h-screen"
+      className="pt-28 pb-24 bg-[#FFF8E6] text-[#1C1C1C] min-h-screen"
     >
       <div className="max-w-[1360px] mx-auto px-6 md:px-10">
         {/* Back Control */}
@@ -33,7 +33,7 @@ export function ProjectDetailView({
           <button
             type="button"
             onClick={onBackToProjects}
-            className="inline-flex items-center gap-2.5 text-xs tracking-[0.08em] font-semibold text-[#4d6080] hover:text-[#f4721e] transition-colors cursor-pointer py-2"
+            className="inline-flex items-center gap-2.5 text-xs tracking-[0.08em] font-semibold text-[#1C1C1C] hover:text-[#555555] transition-colors cursor-pointer py-2"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Featured Projects</span>
@@ -43,19 +43,20 @@ export function ProjectDetailView({
         {/* Project Editorial Title & Metadata */}
         <header className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
           <div className="lg:col-span-8">
-            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#4d6080] mb-4">
-              <span className="text-[#f4721e] font-semibold">{project.category}</span>
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#555555] mb-4">
+              <span className="w-4 h-[1.5px] bg-[#F5B700]" aria-hidden="true" />
+              <span className="text-[#1C1C1C] font-semibold">{project.category}</span>
               <span aria-hidden="true">·</span>
               <span>{project.location}</span>
               <span aria-hidden="true">·</span>
               <span>{project.style}</span>
             </div>
-            <h1 className="font-serif text-[clamp(2.5rem,4.4vw,4.5rem)] leading-[1.05] font-normal text-[#4d6080]">
+            <h1 className="font-serif text-[clamp(2.5rem,4.4vw,4.5rem)] leading-[1.05] font-medium text-[#1C1C1C]">
               {project.title}
             </h1>
           </div>
           <div className="lg:col-span-4 lg:pb-2">
-            <p className="text-[15px] leading-[1.7] text-[#4d6080]">{project.summary}</p>
+            <p className="text-[15px] leading-[1.7] text-[#555555]">{project.summary}</p>
           </div>
         </header>
 
@@ -64,39 +65,39 @@ export function ProjectDetailView({
           <EditorialImage
             src={project.heroImage}
             alt={project.title}
-            containerClassName="relative overflow-hidden bg-[#4d6080]/10 aspect-[16/9]"
+            containerClassName="relative overflow-hidden bg-[#1C1C1C]/5 aspect-[16/9]"
             className="w-full h-full object-cover"
             priority
           />
         </div>
 
         {/* Specifications & Architectural Narrative */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-[#4d6080]/20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-[#1C1C1C]/15">
           {/* Left: Structured Specification Ledger */}
           <div className="lg:col-span-4">
-            <h2 className="font-serif text-2xl text-[#4d6080] mb-6">
+            <h2 className="font-serif text-2xl font-medium text-[#1C1C1C] mb-6">
               Project Specifications
             </h2>
-            <dl className="divide-y divide-[#4d6080]/15 border-y border-[#4d6080]/15 text-sm">
+            <dl className="divide-y divide-[#1C1C1C]/10 border-y border-[#1C1C1C]/15 text-sm">
               <div className="py-3.5 flex justify-between gap-4">
-                <dt className="text-[#4d6080]/80">Category</dt>
-                <dd className="text-[#4d6080] font-semibold text-right">{project.category}</dd>
+                <dt className="text-[#555555]">Category</dt>
+                <dd className="text-[#1C1C1C] font-semibold text-right">{project.category}</dd>
               </div>
               <div className="py-3.5 flex justify-between gap-4">
-                <dt className="text-[#4d6080]/80">Location</dt>
-                <dd className="text-[#4d6080] text-right">{project.location}</dd>
+                <dt className="text-[#555555]">Location</dt>
+                <dd className="text-[#1C1C1C] text-right">{project.location}</dd>
               </div>
               <div className="py-3.5 flex justify-between gap-4">
-                <dt className="text-[#4d6080]/80">Design Style</dt>
-                <dd className="text-[#4d6080] text-right">{project.style}</dd>
+                <dt className="text-[#555555]">Design Style</dt>
+                <dd className="text-[#1C1C1C] text-right">{project.style}</dd>
               </div>
               <div className="py-3.5 flex justify-between gap-4">
-                <dt className="text-[#4d6080]/80">Area</dt>
-                <dd className="text-[#4d6080] tabular-nums text-right">{project.area}</dd>
+                <dt className="text-[#555555]">Area</dt>
+                <dd className="text-[#1C1C1C] tabular-nums text-right">{project.area}</dd>
               </div>
               <div className="py-3.5 flex justify-between gap-4">
-                <dt className="text-[#4d6080]/80">Completion</dt>
-                <dd className="text-[#4d6080] tabular-nums text-right">
+                <dt className="text-[#555555]">Completion</dt>
+                <dd className="text-[#1C1C1C] tabular-nums text-right">
                   {project.year} · {project.timeline}
                 </dd>
               </div>
@@ -113,7 +114,7 @@ export function ProjectDetailView({
                       : 'Residential Interior Design'
                   )
                 }
-                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#4d6080] text-[#e9d9ca] text-xs tracking-[0.09em] font-semibold hover:bg-[#f4721e] transition-colors cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#F5B700] text-[#1C1C1C] text-xs tracking-[0.09em] font-semibold hover:bg-[#1C1C1C] hover:text-[#FFF8E6] transition-colors cursor-pointer"
               >
                 <span>Inquire About a Similar Space</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -125,33 +126,36 @@ export function ProjectDetailView({
           <div className="lg:col-span-8 space-y-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div>
-                <h2 className="font-serif text-2xl text-[#4d6080] mb-3">
+                <h2 className="font-serif text-2xl font-medium text-[#1C1C1C] mb-3">
                   Architectural Brief
                 </h2>
-                <p className="text-[15px] leading-[1.75] text-[#4d6080]">
+                <p className="text-[15px] leading-[1.75] text-[#555555]">
                   {project.challenge}
                 </p>
               </div>
               <div>
-                <h2 className="font-serif text-2xl text-[#4d6080] mb-3">
+                <h2 className="font-serif text-2xl font-medium text-[#1C1C1C] mb-3">
                   Spatial Approach
                 </h2>
-                <p className="text-[15px] leading-[1.75] text-[#4d6080]">
+                <p className="text-[15px] leading-[1.75] text-[#555555]">
                   {project.approach}
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-8 border-t border-[#4d6080]/15">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-8 border-t border-[#1C1C1C]/15">
               <div>
-                <h3 className="text-xs tracking-[0.12em] uppercase text-[#f4721e] font-semibold mb-4">
-                  Material Palette
-                </h3>
-                <ul className="space-y-2.5 text-sm text-[#4d6080]">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <span className="w-4 h-[1.5px] bg-[#F5B700]" aria-hidden="true" />
+                  <h3 className="text-xs tracking-[0.12em] uppercase text-[#1C1C1C] font-semibold">
+                    Material Palette
+                  </h3>
+                </div>
+                <ul className="space-y-2.5 text-sm text-[#555555]">
                   {project.materials.map((item) => (
                     <li
                       key={item}
-                      className="pb-2.5 border-b border-[#4d6080]/15 last:border-b-0"
+                      className="pb-2.5 border-b border-[#1C1C1C]/10 last:border-b-0"
                     >
                       {item}
                     </li>
@@ -159,14 +163,17 @@ export function ProjectDetailView({
                 </ul>
               </div>
               <div>
-                <h3 className="text-xs tracking-[0.12em] uppercase text-[#f4721e] font-semibold mb-4">
-                  Scope Delivered
-                </h3>
-                <ul className="space-y-2.5 text-sm text-[#4d6080]">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <span className="w-4 h-[1.5px] bg-[#F5B700]" aria-hidden="true" />
+                  <h3 className="text-xs tracking-[0.12em] uppercase text-[#1C1C1C] font-semibold">
+                    Scope Delivered
+                  </h3>
+                </div>
+                <ul className="space-y-2.5 text-sm text-[#555555]">
                   {project.deliverables.map((item) => (
                     <li
                       key={item}
-                      className="pb-2.5 border-b border-[#4d6080]/15 last:border-b-0"
+                      className="pb-2.5 border-b border-[#1C1C1C]/10 last:border-b-0"
                     >
                       {item}
                     </li>
@@ -178,8 +185,8 @@ export function ProjectDetailView({
         </div>
 
         {/* Curated Gallery Plates */}
-        <section className="py-16 border-b border-[#4d6080]/20">
-          <h2 className="font-serif text-3xl text-[#4d6080] mb-10">
+        <section className="py-16 border-b border-[#1C1C1C]/15">
+          <h2 className="font-serif text-3xl font-medium text-[#1C1C1C] mb-10">
             Architectural Plates
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
@@ -191,12 +198,12 @@ export function ProjectDetailView({
                 <EditorialImage
                   src={plate.src}
                   alt={plate.caption}
-                  containerClassName={`relative overflow-hidden bg-[#4d6080]/10 ${
+                  containerClassName={`relative overflow-hidden bg-[#1C1C1C]/5 ${
                     index === 0 ? 'aspect-[16/9]' : 'aspect-[4/3]'
                   }`}
                   className="w-full h-full object-cover"
                 />
-                <figcaption className="mt-3 text-xs text-[#4d6080] font-sans text-[13px]">
+                <figcaption className="mt-3 text-xs text-[#555555] font-sans text-[13px]">
                   {plate.caption}
                 </figcaption>
               </figure>
@@ -208,15 +215,18 @@ export function ProjectDetailView({
         {nextProject && nextProject.slug !== project.slug && (
           <div className="pt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div>
-              <p className="text-xs tracking-[0.12em] uppercase text-[#f4721e] font-semibold mb-2">
-                Next Project
-              </p>
-              <h3 className="font-serif text-3xl text-[#4d6080]">{nextProject.title}</h3>
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="w-4 h-[1.5px] bg-[#F5B700]" aria-hidden="true" />
+                <p className="text-xs tracking-[0.12em] uppercase text-[#1C1C1C] font-semibold">
+                  Next Project
+                </p>
+              </div>
+              <h3 className="font-serif text-3xl font-medium text-[#1C1C1C]">{nextProject.title}</h3>
             </div>
             <button
               type="button"
               onClick={() => onOpenProject(nextProject.slug)}
-              className="inline-flex items-center gap-3 px-6 py-3.5 border border-[#4d6080]/30 text-xs tracking-[0.09em] font-semibold text-[#4d6080] hover:bg-[#4d6080] hover:text-[#e9d9ca] transition-colors self-start sm:self-auto cursor-pointer"
+              className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#1C1C1C] text-[#FFF8E6] text-xs tracking-[0.09em] font-semibold hover:bg-[#F5B700] hover:text-[#1C1C1C] transition-colors self-start sm:self-auto cursor-pointer"
             >
               <span>Explore Next Monograph</span>
               <ArrowRight className="w-4 h-4" />

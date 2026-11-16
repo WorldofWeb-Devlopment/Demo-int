@@ -3,25 +3,28 @@ import { WHY_CHOOSE_US } from '../data/studioData';
 
 export function WhyChooseUsSection() {
   return (
-    <section className="py-24 md:py-32 bg-[#e9d9ca] text-[#4d6080] border-b border-[#4d6080]/15">
+    <section className="py-24 md:py-32 bg-[#FFF8E6] text-[#1C1C1C] border-b border-[#1C1C1C]/10">
       <div className="max-w-[1360px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Sticky Editorial Intro */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <p className="text-xs tracking-[0.14em] uppercase text-[#f4721e] font-semibold mb-4">
-              Why Choose Us
-            </p>
-            <h2 className="font-serif text-[clamp(2.25rem,3.6vw,3.5rem)] leading-[1.08] font-normal text-[#4d6080] mb-6">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-6 h-[1.5px] bg-[#F5B700]" aria-hidden="true" />
+              <p className="text-xs tracking-[0.14em] uppercase text-[#1C1C1C] font-semibold">
+                Why Choose Us
+              </p>
+            </div>
+            <h2 className="font-serif text-[clamp(2.35rem,3.8vw,3.6rem)] leading-[1.08] font-medium text-[#1C1C1C] mb-6">
               Crafted With Discipline and Enduring Taste.
             </h2>
-            <p className="text-[15px] leading-[1.75] text-[#4d6080] max-w-md">
+            <p className="text-[15px] leading-[1.75] text-[#555555] max-w-md">
               We take on a deliberate number of commissions each year so principal designers
               and master craftspeople remain deeply involved in every detail.
             </p>
           </div>
 
           {/* Right Editorial Pillar List */}
-          <div className="lg:col-span-7 divide-y divide-[#4d6080]/15 border-y border-[#4d6080]/15">
+          <div className="lg:col-span-7 divide-y divide-[#1C1C1C]/15 border-y border-[#1C1C1C]/15">
             {WHY_CHOOSE_US.map((pillar, index) => (
               <motion.div
                 key={pillar.number}
@@ -35,14 +38,14 @@ export function WhyChooseUsSection() {
                 }}
                 className="py-8 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-baseline"
               >
-                <div className="sm:col-span-2 text-xs text-[#f4721e] tabular-nums font-semibold">
+                <div className="sm:col-span-2 text-xs text-[#1C1C1C] tabular-nums font-semibold">
                   {pillar.number}.
                 </div>
                 <div className="sm:col-span-10">
-                  <h3 className="font-serif text-2xl md:text-[26px] text-[#4d6080] font-normal mb-2.5">
+                  <h3 className="font-serif text-2xl md:text-[26px] text-[#1C1C1C] font-medium mb-2.5">
                     {pillar.title}
                   </h3>
-                  <p className="text-[15px] leading-[1.7] text-[#4d6080] max-w-xl">
+                  <p className="text-[15px] leading-[1.7] text-[#555555] max-w-xl">
                     {pillar.description}
                   </p>
                 </div>

@@ -82,7 +82,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen flex flex-col bg-[#e9d9ca] text-[#4d6080]">
+      <div className="min-h-screen flex flex-col bg-[#FFF8E6] text-[#1C1C1C]">
         <Navbar
           onNavigateSection={scrollToSection}
           onNavigateHome={handleNavigateHome}
